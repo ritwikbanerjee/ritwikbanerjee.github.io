@@ -76,7 +76,11 @@ io.on('connection', (socket)=> {
 });
 
 // startup our app at http://localhost:3000
-server.listen(port, ()=> {                 
-  console.log('App running on Port:  ' + port);
+server.listen(port, (err)=> {      
+  if (err) {
+    console.log('Server error: ', err);
+  } else {
+    console.log('App running on Port:  ' + port);
+  }           
 });
 exports = module.exports = app;
