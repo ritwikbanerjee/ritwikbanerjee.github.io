@@ -1,5 +1,5 @@
 {
-  "name": "Ritwik's Blog",
+  "name": "Ritwik",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server",
