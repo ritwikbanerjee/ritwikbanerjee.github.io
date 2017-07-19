@@ -43,6 +43,7 @@ if (process.env.NODE_ENV !== 'production') {
   console.log('Production Mode');
   app.use(express.static(__dirname + '/dist'));
   app.get('*', function response(req, res) {
+    console.log('service index file');
     res.sendFile(path.join(__dirname, 'dist/index.html'));
   });
 }
