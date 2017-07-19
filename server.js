@@ -76,12 +76,20 @@ io.on('connection', (socket)=> {
   });
 });
 
-// startup our app at http://localhost:3000
-server.listen(port, (err)=> {      
+app.listen(port, (err)=> {
   if (err) {
-    console.log('Server error: ', err);
+    console.log('Server Error from server');
   } else {
-    console.log('App running on Port:  ' + port);
-  }           
-});
+    console.log(`Server running at ${port}`);
+  }
+})
+
+// startup our app at http://localhost:3000
+// server.listen(port, (err)=> {      
+//   if (err) {
+//     console.log('Server error: ', err);
+//   } else {
+//     console.log('App running on Port:  ' + port);
+//   }           
+// });
 exports = module.exports = app;
