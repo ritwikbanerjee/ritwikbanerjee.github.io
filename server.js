@@ -14,7 +14,7 @@ var server = require('http').createServer(app);
 var io = require('socket.io')(server);
 
 // set our port
-var port = 3000;
+const port = process.env.PORT || 3000;
 console.log('HEROKU PORT: ', process.env.PORT);
 
 if (process.env.NODE_ENV !== 'production') {
