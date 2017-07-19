@@ -1,1 +1,0 @@
-web: bin/start-stunnel ./node_modules/.bin/forever -m 5 --minUptime 1000 --spinSleepTime 500 --max_old_space_size=256 --gc_interval=100 server.js
