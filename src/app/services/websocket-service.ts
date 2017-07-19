@@ -8,13 +8,15 @@ import * as io from 'socket.io-client';
 
 export class WebSocketService {
 
-  private url = 'http://localhost:3000';
+  // private url = 'http://localhost:3000';
   private host: string = window.location.protocol + '//' + window.location.hostname + ':' + window.location.port;
   socket    :  any;
   
 
   constructor() {
-    this.socket = io(this.url);
+    console.log('host: ', this.host);
+    this.socket = io(this.host);
+    
   }
 
   send(uri, payload) {
