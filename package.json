@@ -3,6 +3,7 @@
   "main": "server.js",
   "scripts": {
     "postinstall": "npm run build",
+    "heroku-postbuild": "nodemon server",
     "start": "npm run startClient",
     "startClient": "nodemon server",
     "build": "rimraf dist && cross-env NODE_ENV=production webpack --config config/webpack.prod.js --progress --profile --colors",
